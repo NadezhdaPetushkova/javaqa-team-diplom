@@ -599,5 +599,4 @@ public class CreditAccountTest {
 
         Assertions.assertEquals(11_500, account.getBalance());
     }
-
 }
