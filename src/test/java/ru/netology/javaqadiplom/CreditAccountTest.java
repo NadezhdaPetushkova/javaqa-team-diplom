@@ -99,6 +99,16 @@ public class CreditAccountTest {
     }
 
     @Test
+    public void RateMiddle() {
+        CreditAccount account = new CreditAccount(
+                5_000,
+                5_000,
+                50
+        );
+        Assertions.assertEquals(50, account.getRate());
+    }
+
+    @Test
     public void RateEqualOneHundred() {
         CreditAccount account = new CreditAccount(
                 5_000,
@@ -140,6 +150,16 @@ public class CreditAccountTest {
     }
 
     @Test
+    public void CreditLimitMiddle() {
+        CreditAccount account = new CreditAccount(
+                5_000,
+                100_000,
+                15
+        );
+        Assertions.assertEquals(100_000, account.getCreditLimit());
+    }
+
+    @Test
     public void CreditLimitVeryBig() {
         CreditAccount account = new CreditAccount(
                 5_000,
@@ -178,6 +198,16 @@ public class CreditAccountTest {
                 15
         );
         Assertions.assertEquals(1, account.getBalance());
+    }
+
+    @Test
+    public void InitialBalanceMiddle() {
+        CreditAccount account = new CreditAccount(
+                100_000,
+                5_000,
+                15
+        );
+        Assertions.assertEquals(100_000, account.getBalance());
     }
 
     @Test
